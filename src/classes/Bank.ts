@@ -57,6 +57,7 @@ class Bank{
            user.getCpf().indexOf(filter) > -1 ||
            user.getEmail().indexOf(filter) > -1){
               const filteredUser: IUserInfos ={
+                id: user.getId(),
                 name: user.getName(),
                 cpf: user.getCpf(),
                 email: user.getEmail(),
@@ -69,6 +70,7 @@ class Bank{
     }else{
       this.users.forEach((user) => {
         const _user: IUserInfos ={
+          id: user.getId(),
           name: user.getName(),
           cpf: user.getCpf(),
           email: user.getEmail(),
@@ -82,6 +84,10 @@ class Bank{
     if(usersWithoutTransactions.length > 0)return res.status(200).json(usersWithoutTransactions)
 
     return res.status(400).json({message: 'Nenhum usuário encontrado conforme parâmetros!'})
+  }
+
+  putUserById(req: Request, res: Response){
+    
   }
 }
 

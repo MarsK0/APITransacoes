@@ -32,5 +32,13 @@ class User{
   getAge(): number{
     return this.age
   }
+
+  setName(name: string): void{
+    this.name = name
+  }
+
+  setEmail(email: string): void{
+    this.email = email
+  }
 }
 export default User

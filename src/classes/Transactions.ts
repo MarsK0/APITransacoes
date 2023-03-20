@@ -7,7 +7,7 @@ class Transactions{
   constructor(
     private title: string,
     private value: number,
-    private type: 'revenue'|'expense'
+    private type: 'income'|'outcome'
   ){}
 
   getId(): string{
@@ -22,7 +22,7 @@ class Transactions{
     return this.value
   }
 
-  getType(): 'revenue'|'expense'{
+  getType(): 'income'|'outcome'{
     return this.type
   }
 }
