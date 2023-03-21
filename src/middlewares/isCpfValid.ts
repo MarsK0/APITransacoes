@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { bank } from "../routes/routes";
 
-async function isCpfValid(req: Request, res:Response, next: NextFunction){
+function isCpfValid(req: Request, res:Response, next: NextFunction){
   try{
     const cpfIsInvalid = bank.getUsers().some((user) =>{
       return user.getCpf() === req.body.cpf

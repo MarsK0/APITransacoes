@@ -25,6 +25,18 @@ class Transactions{
   getType(): 'income'|'outcome'{
     return this.type
   }
+
+  setTitle(title: string): void{
+    this.title = title
+  }
+
+  setValue(value: number): void{
+    this.value = value
+  }
+
+  setType(type: 'income'|'outcome'): void{
+    this.type = type
+  }
 }
 
 export default Transactions
